@@ -20,9 +20,41 @@ public abstract class Book {
 	private Date publication;
 	private Integer numberOfPages;
 	private Language language;
+	
+	/**
+	 * 
+	 * @param iSBN
+	 * @param title
+	 * @param sumary
+	 * @param publisher
+	 * @param publication
+	 * @param numberOfPages
+	 * @param language
+	 */
+	public Book(String iSBN, String title, String sumary, String publisher, Date publication, Integer numberOfPages,
+			Language language) {
+		super();
+		ISBN = iSBN;
+		this.title = title;
+		this.sumary = sumary;
+		this.publisher = publisher;
+		this.publication = publication;
+		this.numberOfPages = numberOfPages;
+		this.language = language;
+	}
+
+	/**
+	 * Metodo que obtiene el ISBN del libro
+	 * @return devuelve el ISBN del libro
+	 */
 	public String getISBN() {
 		return ISBN;
 	}
+	
+	/**
+	 * 
+	 * @param iSBN 
+	 */
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
@@ -62,9 +94,13 @@ public abstract class Book {
 	public void setLanguage(Language language) {
 		this.language = language;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Book [ISBN=" + ISBN + ", title=" + title + ", sumary=" + sumary + ", publisher=" + publisher
+				+ ", publication=" + publication + ", numberOfPages=" + numberOfPages + ", language=" + language + "]";
+	}
+
 	
 	
 }
