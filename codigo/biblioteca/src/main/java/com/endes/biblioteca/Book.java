@@ -5,13 +5,12 @@ import java.util.Date;
 import com.endes.biblioteca.enumerado.Language;
 
 /**
- * @author Pablo
+ * @author Ricardo
  * @version 1.0
  * 
  * Esta clase representa a un libro abstracto
  * 
  * */
-
 
 public abstract class Book {
 	private String ISBN;
